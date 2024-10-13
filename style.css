@@ -1,0 +1,95 @@
+* {
+    color: black;
+    font-size: 1em;
+    text-decoration: none;
+    font-family: "PT Sans Narrow", "PT Sans", sans-serif;
+    margin: 0;
+}
+.inline{
+    display: inline;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    font-size: 10px;
+}
+#head{
+    background: linear-gradient(to right, green, red);
+    /*background: green;*/
+    padding: 5px 0;
+} 
+#head>a{
+    color: white;
+    font-size: 1.2em;
+    font-weight: 400;
+    padding: 10px 8px;
+    letter-spacing: 0ch;
+}
+#info, #main{
+    padding: 100px;
+}
+#info{
+    background: rgb(55, 55, 55);
+    padding: 0;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#info> *, #info>*>*{
+    display: inline-block;
+    color: white;
+}
+
+#info>span{
+    color: white;
+    font-size:x-large;
+    padding: 0.3vw;
+}
+#info>ul>li>a{
+    color: white;
+}
+#info a>span{
+    color: grey;
+    display: block;
+}
+.relative{
+    position: relative;
+}
+@media (max-width: 767px){
+    #menu-btn{
+        display: inline-block;
+        margin-right: 1%;
+        margin-top: 1.5vw;
+    }
+    #info>ul{
+        display: none;
+    }
+}
+
+@media (min-width: 768px){
+    .show-after-hover{
+        position: absolute;
+        font-size: 150%;
+        top: 50px;
+        right: 0%;
+        color: green;   
+        background-color: white;
+        display: none;
+    }
+    li.relative:hover .show-after-hover{
+        color: green;
+        display: block;    
+    }
+    #info>ul>li *{
+        text-decoration: none;
+        font-family: "PT Sans Narrow", "PT Sans", sans-serif;
+    }
+    #menu-btn{
+        display: none;
+    }
+    .menu-list{
+        font-size: 18px;
+    }   
+}
